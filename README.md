@@ -1,5 +1,9 @@
 # WebDevConquerors #TestifyTuesday Round 1 Tic Tac Toe
-This is the repository of the first round of the #TestifyTuesday within the private Facebook Group "Web Development Conquerors".
+This is the repository of the first round of the #TestifyTuesday within the private Facebook Group 
+## Web Development Conquerors.
+<img src="https://user-images.githubusercontent.com/91799402/158865045-67e00d03-e3f3-49b3-84c9-ce62cdceeb3d.png" width="478" height="250">
+
+[Join Now!](https://www.facebook.com/groups/webdevconquerors/)
 
 # Goal
 Build a Tic Tac Toe game in HTML, CSS and JavaScript on your own. 
@@ -25,7 +29,10 @@ I commit the solution to every round each week until the project has been finish
 - The colors are "deeppink" and "deepskyblue"
 
 ## CHALLENGE #01 - Outcome 🛡️
-![Xnip2022-03-14_19-42-38](https://user-images.githubusercontent.com/91799402/158861678-9515cc7d-03a4-419f-a69d-1a1df0ee6c83.jpg)
-![Xnip2022-03-14_19-43-11](https://user-images.githubusercontent.com/91799402/158861684-853c226d-3176-4a8f-9479-0f54b3b17b5f.jpg)
-![Xnip2022-03-14_19-43-28](https://user-images.githubusercontent.com/91799402/158861689-c37a53e0-0928-40ca-9b56-f2d0ea72f826.jpg)
-![Xnip2022-03-14_19-43-46](https://user-images.githubusercontent.com/91799402/158861693-daab4a47-7272-4b76-ab7a-82b0484216cd.jpg)
+<img src="https://user-images.githubusercontent.com/91799402/158861678-9515cc7d-03a4-419f-a69d-1a1df0ee6c83.jpg" width="1280" height="720">
+<img src="https://user-images.githubusercontent.com/91799402/158861684-853c226d-3176-4a8f-9479-0f54b3b17b5f.jpg" width="1280" height="720">
+<img src="https://user-images.githubusercontent.com/91799402/158861689-c37a53e0-0928-40ca-9b56-f2d0ea72f826.jpg" width="1280" height="720">
+<img src="https://user-images.githubusercontent.com/91799402/158861693-daab4a47-7272-4b76-ab7a-82b0484216cd.jpg" width="1280" height="720">
+
+## CHALLENGE #02 - Tasks 🛡️
+### TBA
