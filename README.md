@@ -35,4 +35,4 @@ I commit the solution to every round each week until the project has been finish
 <img src="https://user-images.githubusercontent.com/91799402/158861693-daab4a47-7272-4b76-ab7a-82b0484216cd.jpg" width="1280" height="720">
 
 ## CHALLENGE #02 - Tasks 🛡️
-### TBA
+### TBA On 22. March 2022

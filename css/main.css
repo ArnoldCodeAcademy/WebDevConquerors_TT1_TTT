@@ -1,0 +1,70 @@
+/*All elements are styled when used the * (asterisk)-sign */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Outfit", sans-serif;
+    box-sizing: border-box;
+}
+
+/* used to hide every element attached with this class */
+.hiddenContainer {
+    display: none;
+}
+
+/* style for the header */
+.header {
+    font-size: 3rem;
+    text-align: center;
+    margin: 15px 0;
+    font-family: "Kings", serif;
+    text-decoration: underline;
+}
+
+/* tag selector used for labels to no bother the with html attribute "class"*/
+label {
+    font-family: "Outfit", serif;
+    font-size: 1.3rem;
+}
+
+/* style for the inputs of the player names container */
+.playerInputContainer {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+/* each individual input is styled the same*/
+.inputField {
+    border: 2px solid #000;
+    outline: none;
+    padding: 4px 8px;
+    margin: 0 0 10px 4px;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+/* when an input field is selected and the cursor blinks inside */
+.inputField:focus {
+    border: 2px solid deeppink;
+    border-radius: 5px;
+}
+
+/* the submit button */
+.submitButton {
+    border: 2px solid deepskyblue;
+    padding: 8px 8px;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+/* when you hover over the submit button with your cursor */
+.submitButton:hover {
+    background-color: deepskyblue;
+    border: 2px solid deepskyblue;
+
+}

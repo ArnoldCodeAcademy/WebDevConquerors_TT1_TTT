@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--    default character set -->
+    <meta charset="UTF-8">
+    <!--     default import to have proper mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    author of this file-->
+    <meta name="author" content="Arnold Abraham & Arnold Code Academy">
+
+    <!--    The tab title -->
+    <title>Tic Tac Toe By ACA</title>
+
+    <!--    The tab icon -->
+    <link rel="icon" href="res/aca_icon.ico">
+
+    <!--    References to google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kings&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+
+    <!--    Reference to our main style sheet -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <!--    Reference to our main.js (javascript source code) -->
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<!-- visible content of the document -->
+<body>
+<div>
+    <!--     header of the page -->
+    <h1 class="header">Tic Tac Toe</h1>
+</div>
+
+<!-- container for our input fields and the submit button -->
+<div class="playerInputContainer">
+    <!--    input form to grab all input values at once -->
+    <form id="formPlayer">
+        <!--        input one for player 1 -->
+        <div>
+            <label for="player1">Player 1</label>
+            <input type="text" placeholder="name here" name="player1" id="player1" class="inputField"/>
+        </div>
+        <!--        input two for player 2 -->
+        <div>
+            <label for="player2">Player 2</label>
+            <input type="text" placeholder="name here" name="player2" id="player2" class="inputField"/>
+        </div>
+        <!-- submit button to send the form as one to JavaScript code -->
+        <input type="submit" class="submitButton" value="Start Game!"/>
+    </form>
+</div>
+</body>
+
+</html>
