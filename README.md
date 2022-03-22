@@ -58,3 +58,8 @@ I commit the solution to every round each week until the project has been finish
 ![clear board button](https://user-images.githubusercontent.com/91799402/159452904-12cb060b-a9bf-4505-a5c1-14e37c5451bc.png)
 ![alternating Player Text](https://user-images.githubusercontent.com/91799402/159453551-777a8c0a-a75a-4eee-9751-995d5e5bf248.png)
 
+## CHALLENGE #03 - Tasks 🛡️
+### TBA on 29 March 2022
+  
+## CHALLENGE #04 - Tasks 🛡️
+### TBA on 05 April 2022
