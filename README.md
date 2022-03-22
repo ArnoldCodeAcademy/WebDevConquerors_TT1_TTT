@@ -35,4 +35,26 @@ I commit the solution to every round each week until the project has been finish
 <img src="https://user-images.githubusercontent.com/91799402/158861693-daab4a47-7272-4b76-ab7a-82b0484216cd.jpg" width="1280" height="720">
 
 ## CHALLENGE #02 - Tasks 🛡️
-### TBA On 22. March 2022
+- Create your 2nd Part of the Tic Tac Toe Game (compare screenshots below).
+- Create a centered & responsive GameBoard with the tool of your choice (flexbox, grid, media query, or other options, whatever you already know or prefer).
+- The board consists of 9 fields (3x3) and follows the rules of tic-tac-toe.
+- The background color of each cell is „deepskyblue“.
+- Make each cell clickable. Mark it with the symbol of the player’s turn ("X“ or „O“ whoever’s turn it is)
+- Make occupied cells not clickable again and also not progressing the game,
+- Player 1 always begins with X.
+- Display interactively the player’s turn with these phrases for each player: 1st "<player1Name>, you are up!", then every even: "<player2Name>, now you!", every odd „Your turn, <player1Name>!"
+- Don’t build in a winning checking algorithm yet. This is part of the next challenge.
+- Make a button that clears the board, so you can start over the game without entering new names.
+- If you refresh the page, it will land on the player names input scene.
+  
+- Hints: :wink:
+- Think simple.
+- You will query and manipluate the DOM very often [Read More About How DOM-Manipulation works](https://medium.com/front-end-weekly/html-dom-guide-for-everyone-ec07fdca93a1)
+- Try to avoid the Tag <table> it makes more problems in terms of responsiveness than it solves
+  
+## CHALLENGE #02 - Outcome 🛡️
+![Empty Board](https://user-images.githubusercontent.com/91799402/159452709-d170a318-fbbc-46f5-827e-59d7e9ffbb75.png)
+![full board](https://user-images.githubusercontent.com/91799402/159452851-95007a61-8c58-4f7a-952f-59b6e8b5f8bb.png)
+![clear board button](https://user-images.githubusercontent.com/91799402/159452904-12cb060b-a9bf-4505-a5c1-14e37c5451bc.png)
+![alternating Player Text](https://user-images.githubusercontent.com/91799402/159453551-777a8c0a-a75a-4eee-9751-995d5e5bf248.png)
+
