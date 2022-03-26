@@ -1,5 +1,5 @@
-# WebDevConquerors #TestifyTuesday Round 1 Tic Tac Toe
-This is the repository of the first round of the #TestifyTuesday within the private Facebook Group 
+# Tic Tac Toe Javascript on GitHub for the WebDevConquerors
+This is #TestifyTuesday Round 1 Tic Tac Toe, the first round of the #TestifyTuesday within the private Facebook Group 
 ## Web Development Conquerors.
 <img src="https://user-images.githubusercontent.com/91799402/158865045-67e00d03-e3f3-49b3-84c9-ce62cdceeb3d.png" width="478" height="250">
 
