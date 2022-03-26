@@ -42,7 +42,7 @@ I commit the solution to every round each week until the project has been finish
 - Make each cell clickable. Mark it with the symbol of the player’s turn ("X“ or „O“ whoever’s turn it is)
 - Make occupied cells not clickable again and also not progressing the game,
 - Player 1 always begins with X.
-- Display interactively the player’s turn with these phrases for each player: 1st "<player1Name>, you are up!", then every even: "<player2Name>, now you!", every odd „Your turn, <player1Name>!"
+- Display interactively the player’s turn with these phrases for each player: 1st "'player1Name', you are up!", then every even: "'player2Name', now you!", every odd „Your turn, 'player1Name'!"
 - Don’t build in a winning checking algorithm yet. This is part of the next challenge.
 - Make a button that clears the board, so you can start over the game without entering new names.
 - If you refresh the page, it will land on the player names input scene.
