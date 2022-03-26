@@ -52,6 +52,62 @@
         <input type="submit" class="submitButton" value="Start Game!"/>
     </form>
 </div>
+<!--This is the board, it needs two styles "boardMain" & "hiddenContainer"-->
+<div class="boardMain hiddenContainer">
+<!--    boardMain is used to query this HTML element by code. You could also use an ID-->
+<!--    hiddenContainer is important to hide the element before player have entered their names -->
+
+    <!-- this element will contain the texts to display which turn is currently ongoing   -->
+    <div class="boardPlayerTurn"></div>
+
+    <!--  It is convenient and best practice to have a wrapping class around many other aligned elements  -->
+    <div class="boardContainer">
+        <!-- Each board cell needs it's own div-->
+        <div class="boardCell">
+            <!-- each cell needs it's own div for a mark "X" or "O" -->
+            <!-- has user defined property called "data-id" to identify it later,
+             can also be done using simple id attribute
+             or just query all elements using query for class -> returns Array of type HTMLCollection
+             -->
+            <div class="mark" data-id="0"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="1"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="2"></div>
+        </div>
+
+        <div class="boardCell">
+            <div class="mark" data-id="3"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="4"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="5"></div>
+        </div>
+
+        <div class="boardCell">
+            <div class="mark" data-id="6"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="7"></div>
+        </div>
+        <div class="boardCell">
+            <div class="mark" data-id="8"></div>
+        </div>
+    </div>
+</div>
+
+<!-- defaultly hidden reset container with button -->
+<div class="reset resetHidden">
+    <!-- reset/replay/clear board button, whatever you prefer to call it -->
+    <button class="replayButton" value="replay">
+        <!-- text inside the button -->
+        <span class="clear-board">Clear Board</span>
+    </button>
+</div>
 </body>
 
 </html>

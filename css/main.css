@@ -68,3 +68,92 @@ label {
     border: 2px solid deepskyblue;
 
 }
+
+/* Style for player's turn above the board */
+.boardPlayerTurn {
+    text-align: center; /* Align text in center of screen */
+    margin: 10px 0 10px; /* make a small margin to display properly */
+    height: 54px; /* suitable height, can be styled differently */
+}
+
+/*Style for the container */
+.boardContainer {
+    width: 40%; /* occupies around 40% of the page. Other values make each cell rectangular */
+    background-color: deepskyblue;
+    margin: 0 auto; /* center it on the screen*/
+    font-size: 0; /* used to make the boar appear in order , test other values to see result*/
+    border: 2px solid #000; /* big border around the board */
+    -webkit-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.75); /* cross compatability for safari browser */
+    -moz-box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.75); /* cross compatability for mozilla browser */
+    box-shadow: 3px 3px 3px 0 rgba(0,0,0,0.75); /* cross compatability for default browsers */
+}
+/* Style for the 9 cells */
+.boardCell {
+    width: calc(100% / 3) /* if you just use 33% that's imprecise, test it out*/;
+    display: inline-block; /* wraps them into a bunch of 3 cells per row*/
+    font-size: 30px; /* needed, otherwise the cells won't show a mark*/
+    text-align: center;
+    border: 2px solid #000;
+    padding: 20px;
+    vertical-align: top; /* needed to make each cell being displayed in line, test it out!*/
+    font-family: "Hubballi", serif;
+}
+
+/* Style for the mark X or O */
+.mark {
+    position: relative; /* The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static. */
+    top: 50%; /* When position is set to relative, the top property specifies the distance the element's top edge is moved below its normal position */
+    transform: translateY(-50%); /* modifies the coordinate space of the CSS visual formatting model . */
+    font-family: "Hubballi", serif;
+    font-size: 3em;
+}
+
+/*Style of the clear board button */
+.replayButton {
+    width: 25%;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    outline: none;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 12px;
+    word-spacing: 3px;
+    background-color: #fff;
+}
+
+/*When Hovering over or the button is active */
+.replayButton:hover,
+.replayButton:active {
+    outline: none;
+    color: #fff;
+    background-color: #000;
+}
+
+/*Style for the reset container */
+.reset {
+    text-align: center;
+    margin: 20px auto 0;
+}
+
+/*Style for the reset container when it should be hidden */
+.resetHidden {
+    display: none; /* The display CSS  property sets whether an element is treated as a block or inline element  and the layout used for its children, such as flow layout , grid  or flex . */
+}
+
+/*The @media CSS  at-rule  can be used to apply part of a style
+sheet based on the result of one or more media queries . With it,
+you specify a media query and a block of CSS to apply to the document if
+and only if the media query matches the device on which the content is being used.*/
+@media only screen and (max-width: 767px) {
+    .boardCell {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .replayButton {
+        font-size: 16px;
+        width: 30%;
+    }
+}
