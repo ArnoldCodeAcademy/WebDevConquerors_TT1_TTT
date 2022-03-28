@@ -67,7 +67,7 @@ I commit the solution to every round each week until the project has been finish
   
 - Hints: :wink:
 - Think simple.
-- An array represeting the fields to win may help you more than you think
+- An array representing the fields to win may help you more than you think
   
 ## CHALLENGE #03 - Outcome 🛡️
 ![Winning Screen Player 1](https://user-images.githubusercontent.com/91799402/160464530-f4ff25f7-eb4a-4aad-bf77-f5e64bb57acb.png)
