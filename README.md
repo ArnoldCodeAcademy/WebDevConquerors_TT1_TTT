@@ -59,7 +59,21 @@ I commit the solution to every round each week until the project has been finish
 ![alternating Player Text](https://user-images.githubusercontent.com/91799402/159453551-777a8c0a-a75a-4eee-9751-995d5e5bf248.png)
 
 ## CHALLENGE #03 - Tasks 🛡️
-### TBA on 29 March 2022
+- Create your last part of the Tic Tac Toe Game (compare screenshots below) to make this a working game
+- Create the winning checking algorithm 
+- Create a graphical indicator who has won
+- Display a winner's phrase where the player's turn normally stands
+- *Optional* create a winning counter for each player (refreshing of the page will reset)
+  
+- Hints: :wink:
+- Think simple.
+- An array represeting the fields to win may help you more than you think
+  
+## CHALLENGE #03 - Outcome 🛡️
+![Winning Screen Player 1](https://user-images.githubusercontent.com/91799402/160464530-f4ff25f7-eb4a-4aad-bf77-f5e64bb57acb.png)
+![Winning Screen Player 2](https://user-images.githubusercontent.com/91799402/160464549-f1e2f234-2021-4c45-9e61-dfb56be4713f.png)
+![Tie Screen](https://user-images.githubusercontent.com/91799402/160464559-6c1da995-216e-40ee-9835-8c362ad341db.png)
+
   
 ## CHALLENGE #04 - Tasks 🛡️
 ### TBA on 05 April 2022
