@@ -98,6 +98,10 @@ label {
     vertical-align: top; /* needed to make each cell being displayed in line, test it out!*/
     font-family: "Hubballi", serif;
 }
+/* Style for the winning sequence */
+.boardCellWinning {
+    background-color: deeppink;
+}
 
 /* Style for the mark X or O */
 .mark {

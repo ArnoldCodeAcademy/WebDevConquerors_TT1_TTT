@@ -5,6 +5,11 @@ window.addEventListener('load', initializeApp);
 let gameBoard = new Array(9);
 let turn = 0; // Keeps track if X or O player's turn
 
+// variable to check of a player has won
+// the winner is determined implicitly by the return of "getCurrentPlayer()"
+let winner = false;
+
+
 // CREATE PLAYER function expression to assign it directly to an object
 // no need for a "class" with constructor, global object would not work
 // because of reference type
@@ -115,28 +120,31 @@ function addCellClickListener() {
 
 // function to change the texts over the board indicating which player's turn
 function changeBoardHeaderNames() {
-    // get a reference (ref) to the player text element
-    let currentPlayerText = document.querySelector('.boardPlayerTurn');
-    // distinction for player with "X" as symbol
-    if (getCurrentPlayer() === 'X') {
-        // adjust the innerHTML of the reference from 3 lines above
-        // by creating new HTML elements inside
-        // you need the backticks ` ` to write html and the ${} syntax to query
-        // for the variable content, otherwise it would be just text and not interpreted
-        // try it with using " " instead of ` `
-        currentPlayerText.innerHTML = `
+    //before changing the header names, check if there is no winner yet
+    if (!winner) {
+        // get a reference (ref) to the player text element
+        let currentPlayerText = document.querySelector('.boardPlayerTurn');
+        // distinction for player with "X" as symbol
+        if (getCurrentPlayer() === 'X') {
+            // adjust the innerHTML of the reference from 3 lines above
+            // by creating new HTML elements inside
+            // you need the backticks ` ` to write html and the ${} syntax to query
+            // for the variable content, otherwise it would be just text and not interpreted
+            // try it with using " " instead of ` `
+            currentPlayerText.innerHTML = `
         Your turn, <span class="name">${playerOne.name}</span>!`
-        // or for player with "O" as symbol
-    } else {
-        // adjust the innerHTML of the reference from 3 lines above
-        // by creating new HTML elements inside
-        // you need the backticks ` ` to write html and the ${} syntax to query
-        // for the variable content, otherwise it would be just text and not interpreted
-        // try it with using " " instead of ` `
-        currentPlayerText.innerHTML = `
+            // or for player with "O" as symbol
+        } else {
+            // adjust the innerHTML of the reference from 3 lines above
+            // by creating new HTML elements inside
+            // you need the backticks ` ` to write html and the ${} syntax to query
+            // for the variable content, otherwise it would be just text and not interpreted
+            // try it with using " " instead of ` `
+            currentPlayerText.innerHTML = `
         <span class="name">${playerTwo.name}</span>, now you!
         <div class="winner"></div>
       `
+        }
     }
 }
 
@@ -158,10 +166,17 @@ function makeMove(event) {
         // if it is player "X"
         if (getCurrentPlayer() === 'X') {
             cellToAddToken.textContent = getCurrentPlayer();
+            // assign the mark of player 1 to the cell
+            gameBoard[currentCell] = 'X';
         } else { // if it is player "O"
             cellToAddToken.textContent = getCurrentPlayer();
+            // assign the mark of player 2 to the cell
+            gameBoard[currentCell] = 'O';
         }
     }
+
+    // Before the next turn can start, we have to check for the winner
+    isWinner();
 
     // Update turn count so next player can choose
     turn++;
@@ -184,7 +199,7 @@ function getCurrentPlayer() {
 // reset the game board by clearing all entries
 function resetBoard() {
     // assigning to the global variable of gameboard a fresh new array
-    // call is done via constructor, Array has the fixed length of 9
+    // call is done via constructor, array has the fixed length of 9
     gameBoard = new Array(9)
 
     // get all cells of the board
@@ -193,17 +208,110 @@ function resetBoard() {
     cells.forEach(square => {
         // square is a temp variable made up to represent one element of the array
         square.textContent = ''; // set the content to empty string
+
+        // remove the winning style for the sequence
+        square.parentElement.classList.remove('boardCellWinning');
     });
 
     turn = 0;
+    // set the winner to false
+    winner = false;
 
-    // resets the player's turn text to restart also with player "X"
+
+    // resets the player's turn text to restart also with player "x"
     let currentPlayerText = document.querySelector('.boardPlayerTurn');
-    currentPlayerText.innerHTML = `
-    <span class="name">${playerOne.name}</span>, you are up!
-    <div class="winner"></div>
-  `
+    currentPlayerText.innerHTML = `<span class="name">${playerOne.name}</span>, you are up!
+    <div class="winner"></div>`
     // adds new listeners since the array got newly created, all listeners are gone
     addCellClickListener();
+}
+
+function isWinner() {
+    // all possible winning sequences in an const array of arrays
+    const winningSequences = [
+        [0, 1, 2],  // winning by marks in top row
+        [3, 4, 5],  // winning by marks in middle row
+        [6, 7, 8],  // winning by marks in bottom row
+        [0, 3, 6],  // winning by marks in left column
+        [1, 4, 7],  // winning by marks in middle column
+        [2, 5, 8],   // winning by marks in right column
+        [0, 4, 8],  // winning by diagonal from upper left to lower right
+        [2, 4, 6]  // winning by diagonal from lower right to upper left
+    ];
+
+    // iterate over each winning sequence and check for a match on the board
+    winningSequences.forEach(winningCombos => {
+        // winningCombos is an array, retrieving each cell
+        let cell1 = winningCombos[0];
+        let cell2 = winningCombos[1];
+        let cell3 = winningCombos[2];
+
+        // check if the boards of the winning sequece are occupied by "X" or "O"
+        if (
+            gameBoard[cell1] === getCurrentPlayer() &&
+            gameBoard[cell2] === getCurrentPlayer() &&
+            gameBoard[cell3] === getCurrentPlayer()
+        ) {
+            // if so, we gather all cells
+            const cells = document.querySelectorAll('.boardCell');
+
+            // if so, we have a winner and mark the winning sequence by iterating over each cell
+            cells.forEach(cell => {
+                // get cellId for the cell
+                let cellId = cell.firstElementChild.dataset.id;
+
+                // and only assign the class of "boardCellWinning" to the ones matching the sequence
+                if (cellId == cell1 || cellId == cell2 || cellId == cell3) {
+                    cell.classList.add('boardCellWinning');
+                }
+            });
+
+            // update the player text to a winning phrase
+            let currentPlayerText = document.querySelector('.boardPlayerTurn');
+
+            // if player X has won
+            if (getCurrentPlayer() === 'X') {
+                currentPlayerText.innerHTML = `
+          <div class="congratulations">Congratulations ${playerOne.name}</div>
+          <div class="winner">You are our winner!</div>
+        `;
+                winner = true;
+                removeCellClickListener();
+            } else {
+                // else player 0 has won
+                currentPlayerText.innerHTML = `
+          <div class="congratulations">Congratulations ${playerTwo.name}</div>
+          <div class="winner">You are our winner!</div>
+        `;
+                winner = true;
+                removeCellClickListener();
+            }
+        }
+    });
+
+    if (!winner) {
+        checkForTie();
+    }
+}
+
+// check for a tie
+function checkForTie() {
+    // since we check for a win every turn,
+    // the maximum turn can't be greater than 7
+    // without a winner
+    // otherwise there must be a tie
+    if (turn > 7) {
+        alert('game over a tie')
+    }
+}
+
+// no more click listeners for the cells, the game is over when this is called
+function removeCellClickListener() {
+    // get all board cells
+    let allCells = document.querySelectorAll('.boardCell');
+    // remove the listeners
+    allCells.forEach(cell => {
+        cell.removeEventListener('click', makeMove);
+    });
 }
 
